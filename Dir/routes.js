@@ -101,8 +101,11 @@ routes.put("/task/:id", (async (req, res) => {
     const { id } = req.params; 
     const { checked } = req.body; 
 
+    const dateConclusion = _datejs.getDateNow.call(void 0, ); 
+
     await _taskjs.taskModel.findByIdAndUpdate(id, {
-        checked
+        checked, 
+        dateConclusion
     });
 
     return res.json({ message: "updated" });

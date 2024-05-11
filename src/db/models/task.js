@@ -6,7 +6,8 @@ const taskSchema = new Schema({
     checked: Boolean,
     priority: String, 
     owner: String, 
-    date: String
+    date: String, 
+    dateConclusion: String 
 }); 
 
 const taskModel = model('task', taskSchema); 
